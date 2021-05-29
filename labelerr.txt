@@ -1,0 +1,18 @@
+---------------------about company-------------------------------------
+
+Labellerr is an AI training and Data Annotation platform for Computer Vision, Voice and NLP solutions. The goal of the company is to provide organizations a tool so that they can focus more on building AI models quickly rather than waiting on any third party services. Specially designed for application requiring labelling huge amounts of data.Labellerr also speacializes in providing ready to deploy pre trained AI solution in various domains like Retail and E-commerce and deply various models from customer tracking to autonomous checkouts. The company also actively participates in enhancing the the field of AI by open sourcing datasets, publishing blogs on recent feats and open sourcing the research plan of thier products.Th company also provides data labelling services and actively works towrads Ai assisted labelling techinques.
+
+---------------------Deliverable on stage 1----------------------------
+1.The dataset has an imbalance problem. There are some unique/rare attributes like Bald and  Mustache with a very low frequency ,and a couple of very common attributes like No Beard and Youn with a very high frequency.
+this means the data is biased towrds young and shaved people .this can cause the data to overfit.Although this can be 
+solved using tweaking the hyper parameters of the data and loss function.
+
+2.The data needs to be one hot encoded,ie it should be represented in binary(0,1) rather than -1 and 1 to get absolute frequency of data. thus ensuring simplified analysis of data.
+
+3.The overfitting of this biased data can be mitigated using data augmentation. This can be achived through the latest Tensorflow 2 architecture which simplifies this procedure with a few lines of code.This increases the amount of data we have thus removing the bias.Data augmentation on the training set leads to a more generalised and a smart model.
+
+4.overfitting of the data can also be reduced using early stopping methodology, Here we call a callback() function during the training process of the model when it reaches a certain validation accuracy thus stopping the model to train before it starts to overfit.
+
+5.Hyper parameters to tweak can be the use of the binary cross entropy loss function because in my cases it works the best on models to minimise information loss during loss estimation.and in terms of optimisers since face data is not a primitive pattern we can go with the adam optimizer( which changes learning rate dynamically) providing a much better accuracy on this non primitive patter recognition of faces.
+
+------------------------Deliverable on stage 2---------------------------------
